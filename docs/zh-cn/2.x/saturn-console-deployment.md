@@ -147,3 +147,7 @@ JDK 1.8:
 使用浏览器访问 http://localhost:9088 即可看到你的Saturn Console！
 
 下面的章节会介绍如何开发你的第一个作业。
+
+### 2.5 关于Console的集群部署
+
+为了实现Console的高可用性，我们都希望Console有多台服务器所组成。我们只需要在多台不同的服务器的环境变量中指定相同的VIP_SATURN_CONSOLE_CLUSTER即可，至于VIP_SATURN_CONSOLE_CLUSTER的值，由你自行指定，只是一个集群标识而已。

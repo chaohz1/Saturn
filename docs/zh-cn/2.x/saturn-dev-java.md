@@ -134,4 +134,4 @@ mvn saturn:zip
 
 会在/target目录下得到**-app.zip**的一个压缩包，参照部署指引将压缩包部署到executor。
 
-当你走完这一步，你的作业已经开发并调试完毕，请参见“Saturn Executor”一节，了解如何把打包好的作业部署到Executor运行。
+当你走完这一步，你的作业已经开发并调试完毕，请参见“部署Saturn Executor”一节，了解如何把打包好的作业部署到Executor运行。
