@@ -1,6 +1,15 @@
 # Saturn作业开发指引之Java作业 (via Maven)
 
+这一节想介绍如何写一个简单的Java作业，并使用你熟悉的IDE进行调试。
+
+> 但要注意的是，作业开发完需要将其部署到Executor才能真正的工作。关于如何部署，见“部署 Saturn Executor”一节。
+
+## 0 前置条件
+
+确保你已经部署好Saturn Console。如果没有，请参见“部署Saturn Console”一节。
+
 ## 1 添加maven依赖
+
 在pom.xml添加dependency
 
 ```xml
@@ -124,3 +133,5 @@ mvn saturn:zip
 ```
 
 会在/target目录下得到**-app.zip**的一个压缩包，参照部署指引将压缩包部署到executor。
+
+当你走完这一步，你的作业已经开发并调试完毕，请参见“Saturn Executor”一节，了解如何把打包好的作业部署到Executor运行。
