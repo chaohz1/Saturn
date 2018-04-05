@@ -1,5 +1,7 @@
 # Saturn Executor部署
 
+Executor是作业的执行器，启动时需要指定所属的域。启动后，会自动拉取域下的作业配置信息，然后根据Saturn Console scheudler的调度安排，以及作业的Cron表达式去执行作业调度。
+
 ## 1 部署前准备 ##
 
 ### 1.1 硬件准备
@@ -115,4 +117,24 @@ Saturn executor start successfully, running as process:18332.
 ```
 
 如果启动失败，根据console提示的路径查看saturn-executor.log。
+
+### 2.5 单台物理机启动多个executor ###
+
+建议在一台物理机启动一个executor。 如果想在单台物理机启动多个executor，建议采用以下步骤：
+
+1. 将saturn-executor-{version} copy到多个
+
+2. 在启动这些executor时，分别指定不同executorname和JMX端口，命令如下：
+
+   ```Shell
+   $ ./saturn-executor.sh start -n www.abc.com -e executor-001 -jmx 24502
+   ```
+
+   注意：executor name，默认是hostname；jmx端口默认是24501
+
+### 2.5 FAQ
+
+Q：新作业部署时，流程是怎么样？
+
+A：参见“灰度发布”一章。
 

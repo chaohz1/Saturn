@@ -5,6 +5,7 @@
 - 部署
   - [部署Saturn Console](zh-cn/2.x/saturn-console-deployment.md)
   - [部署Saturn Executor](zh-cn/2.x/saturn-executor-deployment.md)
+  - [作业的灰度发布](zh-cn/2.x/grayscale_publishing.md)
 - 教程
 - [FAQ](zh-cn/2.x/faq.md)
 - API与命令参数详解

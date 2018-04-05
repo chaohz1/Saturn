@@ -59,17 +59,22 @@ JavaJobReturn是作业结果返回的封装。里面三个成员变量，包括�
 - returnMsg：返回信息。将显示在Console里面。没有默认值。
 - errorGroup：异常码。详情参见教程。
 
-## 3 启动Executor
+## 3 在IDE中调试作业
 
-使用以下Maven命令启动
+这一步会在IDE启动一个Executor进程。
 
-```Shell
-mvn saturn-job:run -Dnamespace=www.abc.com -DexecutorName=exe01 -DVIP_SATURN_CONSOLE_URI=http://127.0.0.1:9080
-```
+### 3.1 Eclipse
+
+点工程右键 -> Run/Debug As -> Run Configuration 
+
+![eclipse_mvn_run_config.png](_media/eclipse_mvn_run_config.png)
 
 - namespace： 命名空间。命名空间用于对作业进行分组，作业必须属于某个命名空间，同一个命名空间下的作业名不能重复。
 - executorName：执行结点唯一标识
-- VIP_SATURN_CONSOLE_URI：saturn-console的地址
+
+### 3.2 IntelliJ IDEA
+
+![idea_mvn_run_config.png](_media/idea_mvn_run_config.jpg)
 
 ## 4 在Console添加Java作业
 
@@ -115,7 +120,7 @@ mvn saturn-job:run -Dnamespace=www.abc.com -DexecutorName=exe01 -DVIP_SATURN_CON
 运行以下命令打包
 
 ```Shell
-mvn saturn-job:zip
+mvn saturn:zip
 ```
 
 会在/target目录下得到**-app.zip**的一个压缩包，参照部署指引将压缩包部署到executor。

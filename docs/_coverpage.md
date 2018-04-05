@@ -1,4 +1,4 @@
-![logo](_media/saturn-logo-new.png)
+![logo](saturn-logo-new.png)
 
 > A distributed job scheduling platform
 
